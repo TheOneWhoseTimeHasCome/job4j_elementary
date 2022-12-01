@@ -1,4 +1,4 @@
 package ru.job4j;
 
-public class Aaa {
+public class Aaaf {
 }
