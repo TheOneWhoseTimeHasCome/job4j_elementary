@@ -3,10 +3,10 @@ package ru.job4j.array;
 public class SortSelected {
 
     public static int[] sort(int[] data) {
-        for (int indStart = 0; indStart < data.length; indStart++) {
-            int minNumb = MinDiapason.findMin(data, indStart, data.length - 1);
-            int indMin = FindLoop.indexInRange(data, minNumb, indStart, data.length - 1);
-            SwitchArray.swap(data, indStart, indMin);
+        for (int i = 0; i < data.length; i++) {
+            int min = MinDiapason.findMin(data, i, data.length - 1);
+            int index = FindLoop.indexInRange(data, min, i, data.length - 1);
+            SwitchArray.swap(data, i, index);
         }
         return data;
     }
