@@ -31,4 +31,31 @@ public class PointTest {
         Assert.assertEquals(expected, out, 0.01);
     }
 
+    @Test
+    public void when1And2And3To4And5And6then5Dot19() {
+        double expected = 5.19;
+        Point point1 = new Point(1, 2, 3);
+        Point point2 = new Point(4, 5, 6);
+        double out = point1.distance3d(point2);
+        Assert.assertEquals(expected, out, 0.01);
+    }
+
+    @Test
+    public void when12And21And33To5And2And65then37Dot86() {
+        double expected = 37.86;
+        Point point1 = new Point(12, 21, 33);
+        Point point2 = new Point(5, 2, 65);
+        double out = point1.distance3d(point2);
+        Assert.assertEquals(expected, out, 0.01);
+    }
+
+    @Test
+    public void when1And2And3To1And2And3then0Dot00() {
+        double expected = 0.00;
+        Point point1 = new Point(1, 2, 3);
+        Point point2 = new Point(1, 2, 3);
+        double out = point1.distance3d(point2);
+        Assert.assertEquals(expected, out, 0.01);
+    }
+
 }
